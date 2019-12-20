@@ -1,0 +1,40 @@
+{
+  "name": "tc-testing",
+  "version": "1.0.0",
+  "description": "Automated testing with Test Cafe",
+  "main": "index.js",
+  "scripts": {
+    "http-server": "node index.js",
+    "test:chrome": "testcafe chrome ./test -s takeOnFails=true",
+    "test:chrome:5": "testcafe -c 4 chrome ./test -s takeOnFails=true",
+    "test:safari": "testcafe safari ./test -s takeOnFails=true",
+    "test:firefox": "testcafe firefox ./test -s takeOnFails=true",
+    "test:chrome:headless": "testcafe chrome:headless ./test -s takeOnFails=true",
+    "test:chrome:mobile": "testcafe chrome:emulation:device=iphone X ./test -s takeOnFails=true",
+    "test:multiple": "testcafe chrome,firefox ./test  -s takeOnFails=true"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "check-node-version": "^4.0.2",
+    "prettier": "^1.19.1",
+    "testcafe-hammerhead": "^14.11.1",
+    "testcafe-reporter-json": "^2.2.0",
+    "testcafe-reporter-list": "^2.1.0",
+    "testcafe-reporter-minimal": "^2.1.0",
+    "testcafe-reporter-nunit": "^0.1.2",
+    "v8": "^0.1.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "xpath-to-css": "^1.0.4",
+    "testcafe": "^1.7.0"
+  },
+  "keywords": [
+    "TestCafe",
+    "testing",
+    "Automation"
+  ]
+}
